@@ -11,46 +11,46 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(userInput) {
   return `
-  # ${data.title}
+  # ${userInput.title}
 
   ## Table of Contents
-  - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contribution](#Contribution)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contribution](#contribution)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Description
-  ${data.description}
+  ${userInput.description}
 
   ## Installation
   Below are instructions on how to install the application.
-  ${data.installation}
+  ${userInput.installation}
 
   ## Usage
-  ${data.usage}
+  ${userInput.usage}
 
   ## License
-  ${data.license}
+  ${userInput.license}
 
   ## Contribution
   Below is a general guideline on how to contribute to this project.
-  ${data.contribution}
+  ${userInput.contribution}
 
   ## Tests
-  Below is the step-by-step description of how to get the development environment running:
-  ${data.tests}
+  Below is the step-by-step description of how to get the development environment running.
+  ${userInput.tests}
 
   ## Questions
-  If you have any questions about the project, you can check out the repo on GitHub or contact me by the email provided below.
-  ${data.github}
-  ${data.email}
+  If you have any questions about the project, you can check out the repo on my GitHub or contact me by the email provided below.
+  - GitHub: https://github.com/${userInput.username}
+  - email: ${userInput.email}
 
-`;
+`
 };
 
 module.exports = generateMarkdown;
