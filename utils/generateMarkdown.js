@@ -1,19 +1,53 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'Apache 2.0':
+      return 'https://img.shields.io/badge/license-Apache%202.0-blue';
+    case 'MIT':
+      return 'https://img.shields.io/badge/license-MIT-blue';
+    case 'GNU GPLv3':
+      return 'https://img.shields.io/badge/license-GNU%20GPLv3-blue';
+    case 'MPL 2.0':
+      return 'https://img.shields.io/badge/license-MPL%202.0-blue';
+    case 'The Unlicense':
+      return 'https://img.shields.io/badge/license-The%20Unlicense-blue';
+    case 'none':
+      return "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// str = "A"
+//renderLicenseLink(str) = 'https://choosealicense.com/licenses/apache-2.0/'
+function renderLicenseLink(license) {
+  switch (license) {
+    case 'Apache 2.0':
+      return 'https://choosealicense.com/licenses/apache-2.0/';
+    case 'MIT':
+      return 'https://choosealicense.com/licenses/mit/';
+    case 'GNU GPLv3':
+      return 'https://choosealicense.com/licenses/gpl-3.0/';
+    case 'MPL 2.0':
+      return 'https://choosealicense.com/licenses/mpl-2.0/';
+    case 'The Unlicense':
+      return 'https://choosealicense.com/licenses/unlicense/';
+    case 'none':
+      return "";
+  }
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(userInput) {
   return `
-  # ${userInput.title}
+  # ${userInput.title} ![${userInput.license}](${renderLicenseBadge(userInput.license)})
 
   ## Table of Contents
   - [Description](#description)
@@ -35,7 +69,8 @@ function generateMarkdown(userInput) {
   ${userInput.usage}
 
   ## License
-  ${userInput.license}
+  The application is covered under following licensing.  For more information about the licensing, please visit the link below:
+  - [${userInput.license}](${renderLicenseLink(userInput.license)})
 
   ## Contribution
   Below is a general guideline on how to contribute to this project.
@@ -47,10 +82,11 @@ function generateMarkdown(userInput) {
 
   ## Questions
   If you have any questions about the project, you can check out the repo on my GitHub or contact me by the email provided below.
-  - GitHub: https://github.com/${userInput.username}
+  - [GitHub](https://github.com/${userInput.username})
   - email: ${userInput.email}
 
 `
 };
 
+renderLicenseSection();
 module.exports = generateMarkdown;

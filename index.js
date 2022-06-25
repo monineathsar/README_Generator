@@ -27,9 +27,11 @@ const questions = [
         message: "Please provide instructions and examples for use of your project."
     },
     {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "Let other developers know what they can and cannot do with your project."
+        choices: ['Apache 2.0', 'MIT', 'GNU GPLv3', 'MPL 2.0', 'The Unlicense', 'none'],
+        message: "Select a license for your project."
+        
     },
     {
         type: "input",
