@@ -1,4 +1,3 @@
-
 # README.md_Generator_Using_Nodes.js ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
 ## Table of Contents
@@ -37,7 +36,19 @@ The application is covered under following licensing.  For more information abou
 ## Mock-Up
 Below is a video showing now this application will work.
 
-https://drive.google.com/file/d/16nHoGS3fIRCtZUVpzN-tQgO7gZYEVZdD/view
+https://youtu.be/wNI-z39VjdI
+
+## Tests
+Below is the step-by-step description of how to get the development environment running.
+```
+If a license was selected, a badge will appear next to the README Title. 
+If a license was selected as "none", the 'License' section will not append on the README file, and it will not append within the 'Table of Contents'.
+```
+
+## Questions
+If you have any questions about the project, you can check out the repo on my GitHub or contact me by the email provided below.
+- [GitHub Repo](https://github.com/monineathsar/README_Generator)
+- monineathsar@gmail.com)
 
 ## Tests
 Below is the step-by-step description of how to get the development environment running.
